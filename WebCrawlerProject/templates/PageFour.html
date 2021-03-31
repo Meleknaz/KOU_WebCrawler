@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Sekme Başlığı</title>
+    </head>
+    <body style="background-color:rosybrown;">
+        <h1 style="color:black;">WebIndexing sayfası</h1>
+
+        <p></p>
+        <form action="/4" method="POST">
+            <input type="url" name="url">
+            <button type="submit">Gönder</button>
+            
+           <!---- <textarea rows="5" name="url_set"></textarea>
+            <button type="submit">Gönder</button>---->
+
+        </form>
+
+       {% if skor1,skor1 ,skor2, skor3,skor4,Maxskor %}
+        <p style="color:black;">BİRİNCİ URL DE EN ÇOK KULLANILAN 5 KELİME : {{top1}}</p>
+        <p style="color:black;"> 1.URL Skor : {{skor1}}</p>
+        <p style="color:black;"> 2.URL Skor : {{skor2}}</p>
+        <p style="color:black;"> 3.URL Skor : {{skor3}}</p>
+        <p style="color:black;"> 4.URL Skor : {{skor4}}</p>
+        <p style="color:black;">Max SKOR: {{Maxskor}}</p>
+    {% else %}
+        <p></p>
+    {% endif %}
+
+   <!--  {% if veri1 , veri2, result,skor %}
+        <p>BİRİNCİ URL DE EN ÇOK KULLANILAN 5 KELİME : {{veri1}}</p>
+        <p>İKİNCİ URL DEKİ TÜM KELİMELER : {{veri2}}</p>
+        <p>İLK URL DE EN ÇOK KULLANILAN KELİMELERDEN İKİNCİ URL DE DE OLANLARI  : {{result}}</p>
+        <p>SKOR: {{skor}}</p>
+    {% else %}
+        <p></p>
+    {% endif %}-->
+
+    </body>
+</html>
