@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Sekme Başlığı</title>
+    </head>
+    <body style="background-color:salmon;">
+        <h1 style="color:black;">Sayfada Geçen Kelimelerin Frekanslarını Hesaplama;</h1>
+        <p style="color:dimgray;"> Verilen bir URL için: URL içeriğinde (URL’in gösterdiği sayfa içeriğinde) her kelimenin kaçar defa yer aldığı(frekansı): </p>
+        <form action="/1" method="POST">
+            <input type="url" name="url">
+            <button type="submit">Gönder</button>
+
+        </form>
+
+        {% if veri %}
+        <p>FREKANSLARI: {{veri}}</p>
+        {% else %}
+        <p></p>
+        {% endif %}
+
+    </body>
+</html>

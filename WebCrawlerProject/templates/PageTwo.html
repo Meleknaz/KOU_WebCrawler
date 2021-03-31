@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Sekme Başlığı</title>
+    </head>
+    <body style="background-color:chartreuse;">
+        <h1 style="color:black;">Anahtar Kelime Bulma sayfası</h1>
+
+        <p style="color:dimgray;">Verilen URL metninde geçen kelimelerden en önemli kelimelerin (sayfanın içerik özelliklerini
+            tanımlayan ve kategorik özelliklerini yansıtan kelime kümesi) belirlenerek anahtar kelimelerin
+            çıkartınız (Aşağıda verilen anahtar kelime oluşturma kriteri tamamen örnek gösterim amaçlıdır.
+            Uygulamada başarılı bir sonuç vermesi beklenmemektedir. Bu kısımda sizin kendi kriterlerinizi
+            doğru bir yaklaşımla oluşturmanız beklenmektedir.)
+            </p>
+        <form action="/2" method="POST">
+            <input type="url" name="url">
+            <button type="submit">Gönder</button>
+
+        </form>
+
+        {% if veri %}
+        <p style="color:black;">Anahtar kelimeler ve frekansları: {{veri}}<br>
+        </p>
+        {% else %}
+        <p></p>
+        {% endif %}
+
+    </body>
+</html>

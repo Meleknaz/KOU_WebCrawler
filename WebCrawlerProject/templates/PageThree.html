@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Frekanstan Verilerini Göster</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body style="background-color:deepskyblue;">
+
+    <h1 style="color:black;">Skor Hesaplama Göster:</h1>
+    <p style="color:dimgray;">verilen iki URL için: İkinci bölümde 1. URL için elde edilen anahtar kelimelerin 2. URL’nin içeriğinde yer alma sayısına dayalı bir benzerlik skor formulü tanımlayıp verilen 2 URL için formulün uygulanması </p>
+    <form action="/3" method="POST">
+        <input type="url1" name="url1"><br>
+        <input type="url2" name="url2"><br>
+        <button type="submit">Gönder</button><br>
+
+    </form>
+ 
+</form>
+
+    {% if veri1 , veri2, result %}
+        <!---<p>VERİ1 ve VERİ2: {{veri1, veri2}}</p>-->
+        <p>BİRİNCİ URL DE EN ÇOK KULLANILAN 5 KELİME : {{veri1}}</p>
+        <p>İKİNCİ URL DEKİ TÜM KELİMELER : {{veri2}}</p>
+        <p>İLK URL DE EN ÇOK KULLANILAN KELİMELERDEN İKİNCİ URL DE DE OLANLARI  : {{result}}</p>
+        <p>SKOR: {{skor}}</p>
+    {% else %}
+        <p></p>
+    {% endif %}
+
+   
+</body>
+</html>
